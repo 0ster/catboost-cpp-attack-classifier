@@ -222,3 +222,57 @@ REM ========================================
 # Windows
 inference.exe
 ```
+
+**результаты выполнения infirence**
+=====================================================
+           CatBoost C++ Inference
+=====================================================
+[OK] Model handle created
+[OK] Model loaded: catboost_model_classifier.cbm
+
+----- Model Info -----
+Float Features: 45
+Cat Features:   0
+Classes:        4
+Trees:          144
+----------------------
+
+===== Batch Inference on test_data.csv =====
+Loaded 205291 samples from CSV
+Running inference on first 20 samples...
+------------------------------------------------------------
+Sample # 1:       Benign (conf: 99.99%, time: 2.565 ms)
+Sample # 2:       Benign (conf: 99.99%, time: 0.013 ms)
+Sample # 3:       Benign (conf: 99.99%, time: 0.006 ms)
+Sample # 4:       Benign (conf: 99.99%, time: 0.009 ms)
+Sample # 5:       Benign (conf: 99.98%, time: 0.008 ms)
+Sample # 6:       Benign (conf: 100.00%, time: 0.007 ms)
+Sample # 7:     PortScan (conf: 100.00%, time: 0.009 ms)
+Sample # 8:       Benign (conf: 99.98%, time: 0.008 ms)
+Sample # 9:       Benign (conf: 99.87%, time: 0.008 ms)
+Sample #10:       Benign (conf: 99.97%, time: 0.012 ms)
+Sample #11:       Benign (conf: 100.00%, time: 0.007 ms)
+Sample #12:       Benign (conf: 100.00%, time: 0.008 ms)
+Sample #13:       Benign (conf: 99.98%, time: 0.011 ms)
+Sample #14:     PortScan (conf: 99.99%, time: 0.008 ms)
+Sample #15:       Benign (conf: 100.00%, time: 0.005 ms)
+Sample #16:          DoS (conf: 99.99%, time: 0.009 ms)
+Sample #17:       Benign (conf: 99.99%, time: 0.006 ms)
+Sample #18:       Benign (conf: 99.99%, time: 0.006 ms)
+Sample #19:       Benign (conf: 99.98%, time: 0.005 ms)
+Sample #20:          DoS (conf: 99.90%, time: 0.007 ms)
+------------------------------------------------------------
+
+----- Statistics -----
+Average inference time: 0.1358 ms
+Throughput: ~7362 predictions/sec
+
+Class distribution in predictions:
+        Benign: 16 (80.0%)
+      PortScan: 2 (10.0%)
+           DoS: 2 (10.0%)
+          DDoS: 0 (0.0%)
+
+[OK] Model deleted
+=====================================================
+Для продолжения нажмите любую клавишу . . .
